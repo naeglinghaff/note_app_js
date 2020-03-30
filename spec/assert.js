@@ -9,5 +9,10 @@
       if (assertionToCheck !== "Hello world") {
         throw new Error("Assertion failed " + assertionToCheck + " is not equal");
       }
+    },
+    returnsValue: function(assertionToCheck) {
+      if (assertionToCheck !== assertionToCheck) {
+        throw new Error("Assertion failed " + assertionToCheck + " doesn't return a value");
+      }
     }
   };

@@ -10,5 +10,13 @@ function testforEquality() {
   assert.isEqual(note.text);
 }
 
+function testforReturnsValue() {
+  let text = "YO"
+  let note = new Note("YO");
+  value = note.getsText();
+  assert.returnsValue(value);
+}
+
 testForString();
 testforEquality();
+testforReturnsValue();
