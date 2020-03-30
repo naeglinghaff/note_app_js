@@ -7,7 +7,7 @@ function testForString() {
 function testforEquality() {
   let text = "Hello world";
   let note = new Note("Hello world");
-  assert.isEqual(note.text);
+  assert.isTrue(note.text === text);
 }
 
 function testforReturnsValue() {
