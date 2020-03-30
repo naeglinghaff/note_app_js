@@ -2,7 +2,7 @@ function Notelist () {
   this.notes = [];
 }
 
-Notelist.prototype.viewNotes = function() {
+Notelist.prototype.getNotes = function() {
   for(let i = 0; i < this.notes.length; i++) {
     return this.notes[i];
   }
