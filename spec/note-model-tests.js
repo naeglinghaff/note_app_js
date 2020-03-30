@@ -14,7 +14,7 @@ function testforReturnsValue() {
   let text = "YO"
   let note = new Note("YO");
   value = note.getsText();
-  assert.returnsValue(value);
+  assert.isTrue(value === note.text);
 }
 
 testForString();

@@ -10,9 +10,11 @@
         throw new Error("Assertion failed " + assertionToCheck + " is not equal");
       }
     },
-    returnsValue: function(assertionToCheck) {
-      if (assertionToCheck !== assertionToCheck) {
-        throw new Error("Assertion failed " + assertionToCheck + " doesn't return a value");
-      }
+    isTrue: function(assertionToCheck) {
+      if (!assertionToCheck) {
+        throw new Error("Assertion failed " + assertionToCheck + " is not true");
+      } else {
+        console.log("Test passes");
     }
-  };
+  }
+}
