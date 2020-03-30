@@ -4,4 +4,11 @@ function testForString() {
   assert.isString(note.text);
 };
 
+function testforEquality() {
+  let text = "Hello world";
+  let note = new Note("Hello world");
+  assert.isEqual(note.text);
+}
+
 testForString();
+testforEquality();
