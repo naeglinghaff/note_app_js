@@ -1,0 +1,23 @@
+{
+  "name": "notes-challenge",
+  "version": "1.0.0",
+  "description": "Notes application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naeglinghaff/note_app_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naeglinghaff/note_app_js/issues"
+  },
+  "homepage": "https://github.com/naeglinghaff/note_app_js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.12.1"
+  }
+}
