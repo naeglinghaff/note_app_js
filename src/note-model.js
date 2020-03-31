@@ -1,7 +1,9 @@
-  function Note(text) {
-    this.text = text;
-  }
+  class Note {
+    constructor(text){
+      this.text = text;
+    }
 
-  Note.prototype.getsText = function() {
+    getsText() {
       return this.text;
     }
+  }

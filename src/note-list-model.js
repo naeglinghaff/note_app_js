@@ -1,13 +1,16 @@
-function Notelist () {
-  this.notes = [];
-}
+class Notelist {
 
-Notelist.prototype.getNotes = function() {
-  for(let i = 0; i < this.notes.length; i++) {
-    return this.notes[i];
+  constructor() {
+    this.notes = [];
   }
-}
 
-Notelist.prototype.addNote = function(note) {
-  this.notes.push(note);
+  getNotes() {
+    for(let i = 0; i < this.notes.length; i++) {
+      return this.notes[i];
+    }
+  }
+
+  addNote(note) {
+    this.notes.push(note);
+  }
 }
