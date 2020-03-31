@@ -6,10 +6,10 @@
 
    viewNotesAsHTML() {
      let x =  this.notelist.notes.map(note => {
-         return (`<li>${note.text}</li>`);
+         return (`<li><div>${note.text}</div></li>`);
      });
 
-     x = x.join("");
+     x = `<ul>${x.join('')}</ul>`;
      return x;
    }
 }
