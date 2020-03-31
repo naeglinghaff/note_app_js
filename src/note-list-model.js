@@ -10,7 +10,7 @@ class Notelist {
     }
   }
 
-  addNote(note) {
-    this.notes.push(note);
+  addNote(text) {
+    this.notes.push(new Note(text));
   }
 }

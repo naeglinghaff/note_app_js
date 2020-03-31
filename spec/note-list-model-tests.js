@@ -1,17 +1,15 @@
 describe('Notelist', function() {
 
   describe('it can add a note', function testForAddingNote() {
-    let notelist = new Notelist;
-    let note = new Note("hello");
-    notelist.addNote(note);
-    assert.isTrue(notelist.notes[0] === note);
+    let notelist = new Notelist();
+    notelist.addNote("hello");
+    assert.isTrue(notelist.notes[0].text === "hello");
   });
 
   describe('it can fetch notes', function testForReturningNotes () {
     let notelist = new Notelist;
-    let note = new Note("hello");
-    notelist.addNote(note);
+    notelist.addNote("hello");
     value = notelist.getNotes();
-    assert.isTrue(value === note);
+    assert.isTrue(value.text === "hello");
   })
 });
