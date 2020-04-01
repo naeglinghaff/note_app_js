@@ -12,4 +12,5 @@ class Notecontroller {
 
 notecontroller = new Notecontroller(new Notelist);
 notecontroller.notelistview.notelist.addNote("hello");
+notecontroller.notelistview.notelist.addNote("hello again");
 notecontroller.insertHTML();

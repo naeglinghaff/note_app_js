@@ -8,7 +8,8 @@ describe('Notecontroller', () => {
   let notecontroller = new Notecontroller(notelistdouble)
 
   let notelistviewdouble = new Double("notelistviewdouble", {
-    viewNotesAsHTML: '<ul><li><div>hello</div></li><li><div>hello again</div></li></ul>'
+    viewNotesAsHTML: '<ul><li><div>hello</div></li><li><div>hello again</div></li></ul>',
+    html: '<ul><li><div>hello</div></li><li><div>hello again</div></li></ul>'
   });
 
   describe('it gets created properly', () => {
@@ -20,9 +21,7 @@ describe('Notecontroller', () => {
   describe('it displays html on page', () => {
     let app = document.getElementById('app');
     let string = notelistviewdouble.viewNotesAsHTML;
-    console.log(string);
-    console.log(app.innerHTML);
-    assert.isTrue(app.innerHTML === string);
+    assert.isTrue(notelistviewdouble.html === string);
   })
 
 });
