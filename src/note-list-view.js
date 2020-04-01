@@ -9,7 +9,8 @@
         throw new Error("No notes");
      } else {
        let x =  this.notelist.notes.map(note => {
-          return (`<li><div>${note.text}</div></li>`);
+          let y = note.text.substr(0,20);
+          return (`<li><div>${y}</div></li>`);
         });
 
         x = `<ul>${x.join('')}</ul>`;
