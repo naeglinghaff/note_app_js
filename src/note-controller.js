@@ -7,10 +7,11 @@ class Notecontroller {
     let html = this.notelistview.viewNotesAsHTML();
     let app = document.getElementById('app');
     app.innerHTML = html;
+    return html;
   }
 }
 
-notecontroller = new Notecontroller(new Notelist);
-notecontroller.notelistview.notelist.addNote("hello");
-notecontroller.notelistview.notelist.addNote("hello again");
-notecontroller.insertHTML();
+// notecontroller = new Notecontroller(new Notelist);
+// notecontroller.notelistview.notelist.addNote("hello");
+// notecontroller.notelistview.notelist.addNote("hello again");
+// notecontroller.insertHTML();
