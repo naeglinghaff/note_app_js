@@ -12,4 +12,12 @@ describe('Notelist', function() {
     value = notelist.getNotes();
     assert.isTrue(value.text === "hello");
   })
+
+  describe('it creates notes with increasing ids', () => {
+    let notelist = new Notelist;
+    notelist.addNote("hey");
+    notelist.addNote("this is another note");
+    let notetotest = notelist.notes[1];
+    assert.isTrue(notetotest.id === 1);
+  })
 });

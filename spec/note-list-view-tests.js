@@ -22,9 +22,9 @@ describe('Notelistview', function () {
     assert.isTrue(notelistview.viewNotesAsHTML() === '<ul><li><div>this is a very very </div></li></ul>');
   })
 
-  describe('it can throws error for empty notelist', function                   testForPrintingNotes() {
+  describe('it throws error for empty notelist', function                   testForPrintingNotes() {
     let notelist = new Notelist;
     let notelistview = new Notelistview(notelist);
-    assert.isTrue(notelistview.viewNotesAsHTML() === 'No notes');
+    assert.isError(notelistview.viewNotesAsHTML());
   });
 });

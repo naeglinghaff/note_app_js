@@ -9,6 +9,7 @@ class Notecontroller {
     app.innerHTML = html;
     return html;
   }
+
 }
 
 // notecontroller = new Notecontroller(new Notelist);

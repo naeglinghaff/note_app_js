@@ -13,9 +13,14 @@ describe('Note', function () {
   });
 
   describe('it can use the getsText method to return text properties', function testforReturnsValue() {
-    let text = "YO"
     let note = new Note("YO");
     value = note.getsText();
     assert.isTrue(value === note.text);
   });
+
+  describe('it can have an id property', () => {
+    let notelist = new Notelist;
+    notelist.addNote("hello again");
+    assert.isTrue(notelist.notes[0].id === 0);
+  })
 });

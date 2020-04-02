@@ -2,6 +2,7 @@ class Notelist {
 
   constructor() {
     this.notes = [];
+    this.count = 0;
   }
 
   getNotes() {
@@ -11,6 +12,7 @@ class Notelist {
   }
 
   addNote(text) {
-    this.notes.push(new Note(text));
+    this.notes.push(new Note(text, this.count));
+    this.count ++;
   }
 }

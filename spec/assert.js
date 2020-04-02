@@ -16,6 +16,13 @@ let pass = "<p style='color: green;'>Test Passed</p>";
         throw new Error("Assertion failed " + assertionToCheck + " is not true");
       } else {
         document.write(pass);
+      }
+    },
+    isError: function(assertionToCheck) {
+      if (assertionToCheck instanceof Error) {
+        document.write(pass);
+      } else {
+        document.write(fail);
+      }
     }
-  }
 }
