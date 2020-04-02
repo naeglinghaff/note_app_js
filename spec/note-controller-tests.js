@@ -17,4 +17,14 @@ describe('Notecontroller', () => {
     assert.isTrue(app.innerHTML === string);
   })
 
+  describe('it fetches and displayed html on hashevents', () => {
+    notecontroller = new Notecontroller(new Notelist);
+    notecontroller.urlChangeDisplaysNoteOnWholePage();
+    notecontroller.notelistview.notelist.addNote("hello");
+    notecontroller.notelistview.notelist.addNote("this should be a longer note to test that this can display text");
+    notecontroller.insertHTML();
+    div = document.getElementById("notes/1")
+    assert.isTrue(div.innerHTML === `<div>this should be a longer note to test that this can display text</div>`);
+  })
+
 });

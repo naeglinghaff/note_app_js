@@ -19,10 +19,10 @@ let pass = "<p style='color: green;'>Test Passed</p>";
       }
     },
     isError: function(assertionToCheck) {
-      if (assertionToCheck instanceof Error) {
-        document.write(pass);
-      } else {
+      if (!(assertionToCheck instanceof Error)) {
         document.write(fail);
+      } else {
+        document.write(pass);
       }
     }
 }
