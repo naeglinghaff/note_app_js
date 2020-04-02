@@ -22,6 +22,13 @@ describe('Notelistview', function () {
     assert.isTrue(notelistview.viewNotesAsHTML() === '<ul><li><div>this is a very very </div></li></ul>');
   })
 
+  describe('it creates a link for each note', () => {
+    let notelist = new Notelist;
+    notelist.addNote("this is a very very long note");
+    let notelistview = new Notelistview(notelist);
+    assert.isTrue(notelistview.viewNotesAsHTML() === '<ul><a href="http://localhost:8080#notes/${note.id}"><li><div>this is a very very </div></li></a></ul>');
+  })
+
   describe('it throws error for empty notelist', function                   testForPrintingNotes() {
     let notelist = new Notelist;
     let notelistview = new Notelistview(notelist);
