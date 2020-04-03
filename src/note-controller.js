@@ -31,11 +31,13 @@ class Notecontroller {
     function displayNote(noteurl) {
       let noteid = noteurl.substring(noteurl.indexOf("/") + 1);
       let note = notecontroller.notelistview.notelist.notes[noteid];
+      let list = document.getElementById('notes');
+      list.innerHTML = notecontroller.notelistview.viewNotesAsHTML();
       let singlenoteview = new Singlenoteview(note);
-      let div = document.getElementById(noteurl);
+      let div = document.getElementById('app');
       div.innerHTML = singlenoteview.getSingleNoteHTML();
-    };
 
+    };
   }
 }
 
