@@ -36,13 +36,28 @@ class Notecontroller {
       let singlenoteview = new Singlenoteview(note);
       let div = document.getElementById('app');
       div.innerHTML = singlenoteview.getSingleNoteHTML();
-
     };
   }
+
+  stopRefreshPageOnFormSubmit() {
+
+    listenForForm();
+
+    function listenForForm() {
+      let form = document.getElementById("text");
+      form.addEventListener("submit", stopsSubmit);
+    }
+
+    function stopsSubmit() {
+      event.preventDefault();
+      console.log(event);
+    }
+  };
 }
 
 notecontroller = new Notecontroller(new Notelist);
 notecontroller.urlChangeDisplaysNoteOnWholePage();
+notecontroller.stopRefreshPageOnFormSubmit();
 notecontroller.notelistview.notelist.addNote("hello");
 notecontroller.notelistview.notelist.addNote("this should be a longer note to test that this can display text");
 notecontroller.notelistview.notelist.addNote("hello again");
