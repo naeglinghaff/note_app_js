@@ -41,17 +41,18 @@ class Notecontroller {
 
   stopRefreshPageOnFormSubmit() {
 
+    let notecontroller = this;
     listenForForm();
 
     function listenForForm() {
       let form = document.getElementById("text");
-      form.addEventListener("submit", stopsSubmit);
+      form.addEventListener("submit", stopsSubmitMakesNewNote);
     }
 
-    function stopsSubmit() {
+    function stopsSubmitMakesNewNote() {
       event.preventDefault();
-      console.log(event);
-      console.log(event.target.elements[0].value);
+      let newnotetext = event.target.elements[0].value;
+      notecontroller.notelistview.notelist.addNote(newnotetext);
     }
   };
 }
@@ -59,7 +60,4 @@ class Notecontroller {
 notecontroller = new Notecontroller(new Notelist);
 notecontroller.urlChangeDisplaysNoteOnWholePage();
 notecontroller.stopRefreshPageOnFormSubmit();
-notecontroller.notelistview.notelist.addNote("hello");
-notecontroller.notelistview.notelist.addNote("this should be a longer note to test that this can display text");
-notecontroller.notelistview.notelist.addNote("hello again");
 notecontroller.insertHTML();
