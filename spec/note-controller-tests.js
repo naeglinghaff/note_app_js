@@ -17,6 +17,11 @@ describe('Notecontroller', () => {
     assert.isTrue(app.innerHTML === string);
   })
 
+  describe('urlChangeDisplaysNoteOnWholePage', () => {
+    let eventcontroller = new Eventcontroller
+    console.log(eventcontroller);
+  })
+
   describe('it fetches singlenote view on hashevents', () => {
     clickEventSimulation(app);
     div = document.getElementById("app")

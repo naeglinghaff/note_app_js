@@ -13,6 +13,7 @@ class Notecontroller {
   urlChangeDisplaysNoteOnWholePage() {
 
     let notecontroller = this;
+
     listenforEvent();
 
     function listenforEvent() {
@@ -60,4 +61,7 @@ class Notecontroller {
 notecontroller = new Notecontroller(new Notelist);
 notecontroller.urlChangeDisplaysNoteOnWholePage();
 notecontroller.stopRefreshPageOnFormSubmit();
+notecontroller.notelistview.notelist.addNote("hello");
+notecontroller.notelistview.notelist.addNote("this should be a longer note to test that this can display text");
+notecontroller.notelistview.notelist.addNote("hello again");
 notecontroller.insertHTML();
