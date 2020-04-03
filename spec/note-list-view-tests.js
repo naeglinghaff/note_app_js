@@ -30,10 +30,4 @@ describe('Notelistview', function () {
     console.log(value);
     assert.isTrue(notelistview.viewNotesAsHTML() === '<ul><a href="http://localhost:8080#notes/0"><li><div>this is a very very </div></li></a></ul>');
   })
-
-  describe('it throws error for empty notelist', function                   testForPrintingNotes() {
-    let notelist = new Notelist;
-    let notelistview = new Notelistview(notelist);
-    assert.isError(notelistview.viewNotesAsHTML());
-  });
 });

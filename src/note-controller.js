@@ -13,7 +13,6 @@ class Notecontroller {
   urlChangeDisplaysNoteOnWholePage() {
 
     let notecontroller = this;
-
     listenforEvent();
 
     function listenforEvent() {
@@ -53,6 +52,7 @@ class Notecontroller {
       event.preventDefault();
       let newnotetext = event.target.elements[0].value;
       notecontroller.notelistview.notelist.addNote(newnotetext);
+      notecontroller.insertHTML();
     }
   };
 }
