@@ -51,6 +51,7 @@ class Notecontroller {
     function stopsSubmit() {
       event.preventDefault();
       console.log(event);
+      console.log(event.target.elements[0].value);
     }
   };
 }
