@@ -19,6 +19,6 @@
   "homepage": "https://github.com/naeglinghaff/note_app_js#readme",
   "dependencies": {},
   "devDependencies": {
-    "http-server": "^0.12.1"
+    "http-server": "^0.12.3"
   }
 }
